@@ -1,0 +1,127 @@
+name: Story
+description: Gebruik dit template om een nieuwe user story aan te maken
+title: "[Story] "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 User Story
+        Beschrijf de behoefte en waarde voor de gebruiker.
+  - type: input
+    id: as_a
+    attributes:
+      label: Als een...
+      description: Wie is de gebruiker?
+  - type: input
+    id: i_want
+    attributes:
+      label: Wil ik...
+      description: Wat wil de gebruiker bereiken?
+  - type: input
+    id: so_that
+    attributes:
+      label: Zodat...
+      description: Wat is de waarde/het doel?
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: ✅ Acceptatiecriteria
+      description: "Concrete, testbare criteria — wanneer is deze story klaar?"
+  - type: textarea
+    id: acceptance_tests
+    attributes:
+      label: 🧪 Acceptatietests / Teststappen
+      description: "Stappen om te verifiëren dat de acceptatiecriteria zijn gehaald."
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: 📏 Schatting (uren)
+      description: Kies een sizing voor planning
+      options:
+        - "0.5"
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+        - "8"
+        - "13"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚑ Prioriteit
+      description: Business prioriteit
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+  - type: input
+    id: dependencies
+    attributes:
+      label: 🔗 Afhankelijkheden / Blockers
+      description: "Andere issues, componenten of teams waar deze story van afhankelijk is"
+  - type: checkboxes
+    id: definition_of_ready
+    attributes:
+      label: ✅ Definition of Ready (DoR)
+      description: "Controleer of de story klaar is om te worden uitgevoerd"
+      options:
+        - label: Story is besproken tijdens een refinement
+          required: false
+        - label: Story is geprioriteerd door de product owner
+          required: false
+        - label: Story is geschat in uren
+          required: false
+        - label: Acceptatiecriteria zijn duidelijk en testbaar
+          required: false
+        - label: Testcases zijn geschreven en gedocumenteerd
+          required: false
+        - label: Indien noodzakelijk zijn er taken aangemaakt en gekoppeld aan de story
+          required: false
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: ✅ Definition of Done (DoD)
+      description: "Controleer of de story klaar is voor oplevering"
+      options:
+        - label: "Code is geschreven volgens de richtlijnen"
+          required: false
+        - label: "Code review is uitgevoerd"
+          required: false
+        - label: "Code is samengevoegd met de main branch"
+          required: false
+        - label: "Unit/integratie/end-to-end tests zijn toegevoegd"
+          required: false
+        - label: "Alle tests slagen lokaal en in de CI/CD pipeline"
+          required: false
+        - label: "Kritische bugs zijn opgelost en getest"
+          required: false
+        - label: "Voor niet kritische bugs is een ticket aangemaakt"
+          required: false
+        - label: "Story voldoet aan de acceptatiecriteria"
+          required: false
+        - label: "Documentatie is bijgewerkt, zowel functioneel als technisch"
+          required: false
+        - label: "Story is gedocumenteerd in de release notes"
+          required: false
+        - label: "Team is geïnformeerd over de wijzigingen"
+          required: false
+        - label: "Product owner heeft de story geaccepteerd"
+          required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 Opmerkingen / Ontwerpnotities
+      description: "Eventuele UI-teksten, links naar designs of API-specs"
+  - type: markdown
+    attributes:
+      value: |
+        **Checklist: Ready & INVEST**
+        - [ ] Independent
+        - [ ] Negotiable
+        - [ ] Valuable
+        - [ ] Estimable
+        - [ ] Small
+        - [ ] Testable
+        Vul de velden hierboven in voordat je de story in de backlog zet.
