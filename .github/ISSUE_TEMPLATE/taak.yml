@@ -1,0 +1,77 @@
+name: 📋 Taak
+description: Verdeel een story in kleinere, beheersbare taken. Focus op de technische implementatie.
+labels: ["taak"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Taak
+        Gebruik dit om een story in kleinere, beheersbare stukken op te delen.
+
+  - type: input
+    id: title
+    attributes:
+      label: Taaknaam
+      placeholder: "bijv. Implementeer gebruikersauthenticatielogica"
+      description: "Duidelijke, technische beschrijving van het werk"
+    validations:
+      required: true
+
+  - type: input
+    id: parent-story
+    attributes:
+      label: 🔗 Parent Story
+      placeholder: "#123"
+      description: "Link naar de user story die deze taak opsplitst"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschrijving / Implementatienotities
+      placeholder: |
+        - Wat moet er gebeuren?
+        - Voorgestelde aanpak of technologie
+        - Relevante codebestanden of modules
+        - Overige implementatieoverwegingen
+      description: "Technische context en richtlijnen voor de ontwikkelaar"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: 📏 Schatting (uren)
+      description: "Geschatte inspanning in uren"
+      options:
+        - "0.5"
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 🔗 Afhankelijkheden / Blockers
+      placeholder: |
+        - #456 (moet eerst voltooid zijn)
+        - In afwachting van ontwerp goedkeuring
+      description: "Andere taken of externe afhankelijkheden"
+
+  - type: checkboxes
+    id: definition-ready
+    attributes:
+      label: ✅ Definition of Ready (DoR)
+      description: "Is deze taak duidelijk en klaar om te starten?"
+      options:
+        - label: "Gekoppeld aan parent story"
+        - label: "Implementatiebenadering is duidelijk"
+        - label: "Afhankelijkheden zijn geïdentificeerd"
+        - label: "Geschatte inspanning is redelijk"
+
+  - type: markdown
+    attributes:
+      value: |
+        **Opmerking:** Acceptatiecriteria en de DoD zijn gedefinieerd in de parent story. Deze taak richt zich op het technische implementatiewerk.
